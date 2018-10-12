@@ -1,7 +1,3 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from './styles.css'
 import {
   decodedFrameCount,
   decodedVideoByteCount,
@@ -14,7 +10,7 @@ import {
   src,
   networkState,
   currentTime as currentVideoTime
-} from './core/HTML5VideoProperties'
+} from './HTML5VideoProperties'
 
 import {
   loadStart,
@@ -28,49 +24,31 @@ import {
   getJoinedTime,
   getTotalRebufferingTime,
   getTotalRebufferingEventsNum
-} from './core/EventsManager'
+} from './EventsManager'
 
-import { convertBytesToBits } from './utilities/converter'
+import { convertBytesToBits } from '../utilities/converter'
 
 import {
   formatBufferedRanges,
   formatSeekableRanges,
   formatPlayedRanges,
-} from './utilities/utils.js';
+} from '../utilities/utils.js';
 
 import {
   calculateAverageBitRate,
-} from './utilities/stats.js';
+} from '../utilities/stats.js';
 
 import {
   sendJsonReport,
   sendJsonSnapshots,
   getIpAddress,
-} from './core/Caller';
+} from './Caller';
 
 import {
   MAX_SNIFFING_SESSION
-} from './config/config';
+} from '../config/config';
 
-import Report from './model/Report';
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+import Report from '../model/Report';
 
 let lastDecodedFrames = 0;
 let lastDroppedFrames = 0;

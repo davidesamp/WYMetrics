@@ -1,6 +1,6 @@
 {
-  "short_name": "video-metrics",
-  "name": "video-metrics",
+  "short_name": "@wyscout/video-metrics",
+  "name": "@wyscout/video-metrics",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

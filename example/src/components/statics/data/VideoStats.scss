@@ -1,0 +1,52 @@
+$btn-primary-color: #00ace6;
+
+.stats-container {
+    margin:100px;
+    display: flex;
+    flex-direction: column;
+
+    .table-times-range {
+      font-size: 12px;
+      padding:6px;
+    }
+
+    .stats-header {
+      position: relative;
+      margin-bottom: 20px;
+
+      .stats-header-btn {
+        background-color: $btn-primary-color;
+        color: #fff;
+        border-color: $btn-primary-color;
+        font-size: .875rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11), 0 4px 6px 0 rgba(40, 77, 89, 0.1);
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        padding: 6px 12px;
+        margin: 0;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        background-image: none;
+        line-height: 1 !important;
+        min-height: 36px;
+        border: 1px solid #e4e4e4;
+      }
+
+      .stats-header-btn:focus {
+        background-color: #1ac5ff;
+      }
+
+      .clean {
+        float: right;
+      }
+
+      .load {
+        min-height: 46px;
+      }
+    }
+}
