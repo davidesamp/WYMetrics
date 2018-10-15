@@ -60,7 +60,8 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
     "@wyscout/video-player": "^1.7.8",
-    "@wyscout/wygui": "^2.6.1"
+    "@wyscout/wygui": "^2.6.1",
+    "@wyscout/eslint-config-wyscout": "^4.0.1"
   },
   "files": [
     "dist"

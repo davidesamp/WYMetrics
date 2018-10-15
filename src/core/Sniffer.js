@@ -45,7 +45,8 @@ import {
 } from './Caller';
 
 import {
-  MAX_SNIFFING_SESSION
+  MAX_SNIFFING_SESSION,
+  MAX_METRICS_CACHED,
 } from '../config/config';
 
 import Report from '../model/Report';
@@ -75,14 +76,13 @@ const onVideoPlaying = (event) => {
 
 const stopWork = () => {
   console.log("STOP WORK");
-  cancelAnimationFrame(requestAnimationId)
+  cancelAnimationFrame(requestAnimationId);
   requestAnimationId = 0;
 }
 
 
 const starWork = () => {
   console.log("START WORK");
-  debugger;
   if(!requestAnimationId) timer();
 }
 
@@ -192,7 +192,7 @@ export const sniffVideoMetrics = () => {
           STYLE_INFO);
       }
 
-      if((report.snapshots && report.snapshots.length > 10) || numSeconds > MAX_SNIFFING_SESSION)
+      if((report.snapshots && report.snapshots.length > MAX_METRICS_CACHED) || numSeconds > MAX_SNIFFING_SESSION)
       {
           report.setJoinedTime(getJoinedTime());
           report.setRebufferingTime(getTotalRebufferingTime());

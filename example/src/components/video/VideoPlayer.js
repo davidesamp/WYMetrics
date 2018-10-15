@@ -1,5 +1,5 @@
 import React from 'react'
-import { sniffVideoMetrics } from 'video-metrics';
+import { sniffVideoMetrics } from '@wyscout/video-metrics';
 import VideoPlayer from '@wyscout/video-player';
 
 
@@ -21,7 +21,7 @@ class VideoPlayerSand extends React.Component {
   _onDownloadClips = () => {
 
   }
-  render () {
+  rendeWyscoutVpl () {
     return (
       <div style={{'width' : '50%', 'left' : '25%', 'position' : 'relative'}}>
        <VideoPlayer
@@ -40,6 +40,19 @@ class VideoPlayerSand extends React.Component {
           quality="fullhd"
           hideTools
       />
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      <div style={{'width' : '50%', 'left' : '20%', 'position' : 'relative', 'top' : '15px'}}>
+      <video id='video' controls="controls" preload='true'
+          width="1000" poster="http://media.w3.org/2010/05/sintel/poster.png">
+          <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+          <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+          <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+        </video>
       </div>
     )
   }

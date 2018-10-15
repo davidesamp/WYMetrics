@@ -224,7 +224,7 @@ class VideoStats extends React.Component {
     })
 
     return (
-       <div className={'stats-container'}>
+       <div className={'stats-container'} style={{'margin': '40px'}}>
           {this._getHeaderContent()}
           <Table
           size={'small'}
