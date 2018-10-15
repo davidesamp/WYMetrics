@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save video-metrics
+npm install --save @wyscout/video-metrics
 ```
 
 ## Usage
@@ -15,12 +15,17 @@ npm install --save video-metrics
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'video-metrics'
+import { sniffVideoMetrics } from '@wyscout/video-metrics'
 
 class Example extends Component {
+
+  componentDidMount = () => {
+    sniffVideoMetrics();
+  }
+
   render () {
     return (
-      <MyComponent />
+      <MyVideoPlayerToBeProfiled />
     )
   }
 }
